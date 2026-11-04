@@ -5,16 +5,33 @@
 
 body {
     height: 100vh;
-    width: 100vw;
     min-height: 100vh;
-    min-width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
+    padding: 10px;
 }
 
 .world {
+    width: 1000px;
+    height: 600px;
     overflow: hidden;
     position: relative;
+    border: 1px solid black;
+}
+
+.ground {
+    margin: 0;
+    width: 2000px;
+    height: auto;
+    position: absolute;
+    /* border: 1px solid red; */
+}
+.dino {
+    margin: 0;
+    width: 70px;
+    height: auto;
+    position: absolute;
+    /* border: 1px solid blue; */
 }
