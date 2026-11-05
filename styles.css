@@ -33,5 +33,6 @@ body {
     width: 70px;
     height: auto;
     position: absolute;
+    z-index: 999;
     /* border: 1px solid blue; */
 }
