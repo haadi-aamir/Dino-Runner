@@ -20,6 +20,28 @@ body {
     position: relative;
     border: 1px solid black;
 }
+.start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+.score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
 
 .ground {
     margin: 0;
@@ -35,4 +57,8 @@ body {
     position: absolute;
     z-index: 999;
     /* border: 1px solid blue; */
+    border: 1px solid red;
+}
+.cactus {
+    border: 1px solid green;
 }

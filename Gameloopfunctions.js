@@ -1,4 +1,5 @@
-import { GameWorld, gravity, dinoElement, groundElement1, groundElement2, dino, ground1, ground2, ground, keys, Cactus, cactuses } from "./objects.js";
+import { GameWorld, gravity, dinoElement, groundElement1, groundElement2, dino, ground1, ground2, ground, keys, GameOversetter, cactuses, iscolliding, scoreUpdate} from "./objects.js";
+
 
 export function update(deltaTime) {
     // PLAYER INPUT
@@ -20,7 +21,6 @@ export function update(deltaTime) {
         }
         if (ground2.x <= -ground2.width) {
             ground2.x = ground1.x + ground1.width; // reset ground2 to the right of ground1
-            console.log("Ground 2 reset to: " + ground2.x);
         }
         ground1.x -= ground1.speed_x * deltaTime; 
         ground2.x -= ground2.speed_x * deltaTime; // deltaTime is the time elapsed since the last frame in seconds; (formula is d = s * t).
@@ -46,7 +46,7 @@ export function update(deltaTime) {
 
         // CACTUS MOVEMENT
         for (const cactus of cactuses) {
-            cactus.update(deltaTime);
+            cactus.update(deltaTime, cactuses);  
         }
         
     }
@@ -61,7 +61,12 @@ export function update(deltaTime) {
         }
 
         // collision with cactus (not implemented yet) 
-
+        for (const cactus of cactuses) {
+            if (iscolliding(dino, cactus)) {
+                GameOversetter(true); // set GameOver to true
+                console.log("Game Over");
+            }
+        }
 
     }
     handleInput()
@@ -85,4 +90,8 @@ export function render() {
     for (const cactus of cactuses) {
         cactus.render();
     }
+}
+
+export function updateScore(deltaTime) {
+    scoreUpdate(deltaTime);
 }
