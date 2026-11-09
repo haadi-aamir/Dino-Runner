@@ -24,7 +24,7 @@ export const dino = {
     velocity_y: 0, 
     is_grounded: true,
     jumping: false,
-    jump_height: 600, // the height the dino will jump in pixels. this is used to calculate the initial velocity needed to reach that height.
+    jump_velocity: 600, // the height the dino will jump in pixels. this is used to calculate the initial velocity needed to reach that height.
 }
 
 export const ground1 = {
@@ -148,6 +148,7 @@ export function STARTsetter(value) {
 }
 export function resetScore() {
     score = 0;
+    scoreElement.textContent = "0";
 }
 
 export function scoreUpdate(deltaTime) {

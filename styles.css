@@ -56,9 +56,4 @@ body {
     height: auto;
     position: absolute;
     z-index: 999;
-    /* border: 1px solid blue; */
-    border: 1px solid red;
-}
-.cactus {
-    border: 1px solid green;
 }

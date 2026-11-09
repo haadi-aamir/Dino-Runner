@@ -5,11 +5,9 @@ export function update(deltaTime) {
     // PLAYER INPUT
     function handleInput() {
         if (keys["space"] && dino.is_grounded) {
-            console.log("space pressed")
-            dino.velocity_y = -dino.jump_height; // negative because the y axis is inverted in the browser (0,0 is top left corner)
+            dino.velocity_y = -dino.jump_velocity; // negative because the y axis is inverted in the browser (0,0 is top left corner)
             dino.is_grounded = false;
             dino.jumping = true;
-            console.log("JUMP:", dino.velocity_y);
         }
     }
 
