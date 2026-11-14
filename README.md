@@ -32,7 +32,7 @@ This project was created as a hands-on learning exercise to practise JavaScript 
 1. Clone the repository:
 
    ```bash
-   git clone YOUR_REPOSITORY_URL
+   git clone https://github.com/haadi-aamir/Dino-Runner.git
    ```
 
 2. Navigate into the project folder:
