@@ -38,7 +38,7 @@ This project was created as a hands-on learning exercise to practise JavaScript 
 2. Navigate into the project folder:
 
    ```bash
-   cd JsGame
+   cd Dino-Runnder
    ```
 
 3. Start a local development server:
